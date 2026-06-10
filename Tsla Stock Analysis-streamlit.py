@@ -2252,7 +2252,7 @@
    },
    "source": [
     "##### 1. Why did you pick the specific chart?"
-   ]0
+   ]
   },
   {
    "cell_type": "markdown",
