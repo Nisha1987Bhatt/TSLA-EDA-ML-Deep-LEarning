@@ -6633,7 +6633,7 @@
     "gCX9965dhzqZ",
     "gIfDvo9L0UH2"
    ],
-   "private_outputs": true,
+   "private_outputs": True,
    "provenance": []
   },
   "kernelspec": {
