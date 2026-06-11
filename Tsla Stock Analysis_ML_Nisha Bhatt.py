@@ -1581,7 +1581,6 @@ print(f"10-Day Data Shapes -> Train X: {X_train_10.shape}, Test X: {X_test_10.sh
 # In[ ]:
 
 
-get_ipython().system('pip install tensorflow')
 
 
 # ### ML Model - 1
@@ -2564,7 +2563,6 @@ print("-" * 55)
 # In[ ]:
 
 
-get_ipython().system('pip install shap')
 
 
 # In[66]:
