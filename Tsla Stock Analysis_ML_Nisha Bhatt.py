@@ -125,7 +125,7 @@ import seaborn as sns
 
 
 # Load Dataset
-df= pd.read_csv(r"C:\Users\Ashutosh Bhatt\OneDrive - Qualicentric ITES Private Limited\Desktop\tesla_project\TSLA.csv")
+df = pd.read_csv("TSLA.csv")
 
 
 # ### Dataset First View
