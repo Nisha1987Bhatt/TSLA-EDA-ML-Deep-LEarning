@@ -193,7 +193,7 @@ plt.title("Missing values chart")
 plt.xlabel("Columns")
 plt.ylabel("Missing Count")
 plt.tight_layout()
-plt.show()
+st.pyplot(plt)
 
 
 # ### What did you know about your dataset?
@@ -314,7 +314,7 @@ plt.plot(df.index, df['Low'],  label = 'Low')
 plt.plot(df.index, df['Close'], label = 'Close')
 plt.title("1. Tesla Stock Analysis from 2010 to 2020")
 plt.legend()
-plt.show()
+st.pyplot(plt)
 
 
 # ##### 1. Why did you pick the specific chart?
@@ -352,7 +352,7 @@ plt.title("2.Volumne Chart")
 plt.xlabel("volume")
 plt.ylabel("count")
 plt.legend
-plt.show()
+st.pyplot(plt)
 
 
 # ##### 1. Why did you pick the specific chart?
@@ -399,7 +399,7 @@ plt.ylabel("Date")
 plt.title("3.Tesla Volume- from 2010 to 2020")
 df['Volume'].plot()
 plt.tight_layout()
-plt.show()
+st.pyplot(plt)
 
 
 # ##### 1. Why did you pick the specific chart?
@@ -436,7 +436,7 @@ sns.scatterplot(x="Open",y="Close",data=df,color="red", alpha= 0.6)
 plt.title("4. Open & Close")
 plt.xlabel("Open")
 plt.ylabel("Close")
-plt.show()
+st.pyplot(plt)
 
 
 # ##### 1. Why did you pick the specific chart?
@@ -475,7 +475,7 @@ plt.title('5.Boxplot of Stock Prices', fontsize=14,)
 plt.ylabel('Price')
 plt.xticks(rotation=45)
 plt.tight_layout()
-plt.show()
+st.pyplot(plt)
 
 
 # ##### 1. Why did you pick the specific chart?
@@ -507,7 +507,7 @@ plt.title('6.Boxplot of Trading Volume', fontsize=14,)
 plt.ylabel('Price')
 plt.xticks(rotation=45)
 plt.tight_layout()
-plt.show()
+st.pyplot(plt)
 
 
 # ##### 1. Why did you pick the specific chart?
@@ -542,7 +542,7 @@ plt.title  ("7.Stock Priced Acheieved by Year")
 plt.xlabel('Year',fontsize=12)
 plt.ylabel('Highest Price')
 plt.tight_layout()
-plt.show()           
+st.pyplot(plt)           
 
 
 # ##### 1. Why did you pick the specific chart?
@@ -581,7 +581,7 @@ plt.plot(sorted_price,color='blue',linewidth=2)
 plt.title("8.Sorted Open Share Price Graph")
 plt.xlabel("Data Points")
 plt.ylabel("Price of Share")
-plt.show()
+st.pyplot(plt)
 
 
 
@@ -616,7 +616,7 @@ plt.plot(sorted_price,color='red',linewidth=2)
 plt.title("9.Sorted Close Share Price Graph")
 plt.xlabel("Data Points")
 plt.ylabel("Price of Share")
-plt.show()
+st.pyplot(plt)
 
 
 # ##### 1. Why did you pick the specific chart?
@@ -648,7 +648,7 @@ plt.plot(list(df['High'].keys())),(df['Low'].keys())
 plt.title("10.High vs Low")
 plt.xlabel("High")
 plt.ylabel("Low")
-plt.show()
+st.pyplot(plt)
 
 
 # ##### 1. Why did you pick the specific chart?
@@ -687,7 +687,7 @@ plt.title('11.Daily Returns Distribution', fontsize=14)
 plt.xlabel('Daily Return')
 plt.ylabel('Frequency')
 plt.tight_layout()
-plt.show()
+st.pyplot(plt)
 
 
 # ##### 1. Why did you pick the specific chart?
@@ -727,7 +727,7 @@ plt.title('12. Stock Prices with Moving Averages')
 plt.xlabel('Date')
 plt.ylabel('Price')
 plt.legend()
-plt.show()
+st.pyplot(plt)
 
 
 # ##### 1. Why did you pick the specific chart?
@@ -783,7 +783,7 @@ plt.show()
 cols=["Open","High","Low","Close","Volume","Price Range"]
 sns.heatmap(df[cols].corr(),annot=True,cmap="coolwarm",fmt=".2f")
 plt.title("14. Coorelation Heatmap")
-plt.show()
+st.pyplot(plt)
 
 
 # ##### 1. Why did you pick the specific chart?
@@ -815,7 +815,7 @@ sns.pairplot(numeric_cols, diag_kind="hist",
              diag_kws={"color":"red"})
 
 plt.suptitle("Pair plot - Tesla Stock Analysis")
-plt.show()                                                   
+st.pyplot(plt)                                                   
 
 
 # ##### 1. Why did you pick the specific chart?
@@ -1015,7 +1015,7 @@ plt.title("Missing Value % before Imputation")
 plt.xlabel('Columns')
 plt.ylabel('Missing%')
 plt.tight_layout()
-plt.show()
+st.pyplot(plt)
 #Replace sentinel values 
 print("="*55)
 df.replace(-1,np.nan,inplace=True)
@@ -1096,7 +1096,7 @@ for i , col in enumerate(numeric_cols):
     axes[i].set_title(col)
     axes[i].set_xlabel(col)
 plt.tight_layout()
-plt.show()
+st.pyplot(plt)
 print("="*55)
 # detecting outliers using IQR method
 print("IQR method for outliers detection")
@@ -1345,7 +1345,7 @@ plt.title("Feature Importance Analysis-TSLA Stock")
 plt.xlabel("Importance Score")
 plt.ylabel("Features")
 plt.tight_layout
-plt.show()
+st.pyplot(plt)
 # coorelation check
 plt.figure(figsize=(10,6))
 sns.heatmap(df[feature_cols].corr(),
@@ -1527,7 +1527,7 @@ plt.bar(["Train","Test"],
 plt.title ("Train Vs Test Split Data")
 plt.ylabel("Number of rows")
 plt.tight_layout()
-plt.show()
+st.pyplot(plt)
 
 
 # ##### What data splitting ratio have you used and why?
@@ -1667,7 +1667,7 @@ plt.xlabel('Time Steps (Test Set Rows)', fontsize=12)
 plt.ylabel('Target Price (Normalized)', fontsize=12)
 plt.legend(fontsize=11)
 plt.grid(True, alpha=0.3)
-plt.show()
+st.pyplot(plt)
 
 
 
@@ -1884,7 +1884,7 @@ for i, name in enumerate(horizons_list):
 
 plt.xlabel('Sequential Testing Timeline Steps', fontsize=12)
 plt.tight_layout()
-plt.show()
+st.pyplot(plt)
 
 
 # #### 1. Explain the ML Model used and it's performance using Evaluation metric Score Chart.
@@ -2283,7 +2283,7 @@ fig.legend(handles=legend_patches,
 plt.tight_layout()
 plt.savefig('gru_evaluation_metrics.png', dpi=150,
             bbox_inches='tight', facecolor='white')
-plt.show()
+st.pyplot(plt)
 print("Chart saved as gru_evaluation_metrics.png")
 
 
@@ -2889,7 +2889,7 @@ for ax, (horizon, result) in zip(axes, sanity_results.items()):
 plt.tight_layout()
 plt.savefig('gru_sanity_check.png', dpi=150,
             bbox_inches='tight', facecolor='white')
-plt.show()
+st.pyplot(plt)
 
 
 # 9. SAMPLE PREDICTION TABLE — 1-Day first 10 samples
@@ -3069,7 +3069,7 @@ for ax, (horizon, result) in zip(axes, sanity_results.items()):
 plt.tight_layout()
 plt.savefig('gru_sanity_check.png', dpi=150,
             bbox_inches='tight', facecolor='white')
-plt.show()
+st.pyplot(plt)
 print("\nSanity check chart saved as gru_sanity_check.png")
 
 
