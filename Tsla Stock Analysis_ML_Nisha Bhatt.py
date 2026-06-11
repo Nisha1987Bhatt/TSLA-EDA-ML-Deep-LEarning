@@ -242,7 +242,7 @@ import pandas as pd
 import numpy as np
 
 # load dataset
-df= pd.read_csv(r"C:\Users\Ashutosh Bhatt\OneDrive - Qualicentric ITES Private Limited\Desktop\tesla_project\TSLA.csv")
+df= pd.read_csv("TSLA.csv")
 # check for  Missing values
 df.isnull().sum()
 # drop rows with missing values
@@ -305,7 +305,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 # line chart 
-df = pd.read_csv(r"C:\Users\Ashutosh Bhatt\OneDrive - Qualicentric ITES Private Limited\Desktop\tesla_project\TSLA cleaned data.csv")
+df = pd.read_csv("TSLA cleaned data.csv")
 plt.rcParams["figure.figsize"]=(20,15)
 plt.figure()
 plt.plot(df.index, df['Open'], label = 'Open')
@@ -993,7 +993,7 @@ from sklearn.impute import KNNImputer
 import warnings
 warnings.filterwarnings("ignore")
 # load dataset
-df=pd.read_csv(r"C:\Users\Ashutosh Bhatt\OneDrive - Qualicentric ITES Private Limited\Desktop\tesla_project\TSLA cleaned data.csv")
+df=pd.read_csv("TSLA cleaned data.csv")
 print("="*55)
 print("Missing Value Imputation")
 print(f"Dataset Shape :{df.shape}")
@@ -1084,7 +1084,7 @@ print("saved")
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-df = pd.read_csv(r"C:\Users\Ashutosh Bhatt\OneDrive - Qualicentric ITES Private Limited\Desktop\tesla_project\TSLA Imputed data.csv")
+df = pd.read_csv("TSLA Imputed data.csv")
 print(f" Dataset Shape : {df.shape}")
 print("="*55)
 numeric_cols=['Open','High','Low','Close','Volume','Daily Return','Price Range','MA_20','MA_50']
