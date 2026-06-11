@@ -120,7 +120,71 @@ import seaborn as sns
 import streamlit as st
 
 # ### Dataset Loading
+import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt
 
+# ==========================================
+# 1. LOAD YOUR DATA
+# ==========================================
+# (Replace this with how you currently load your Tesla CSV file)
+@st.cache_data
+def load_data():
+    df = pd.read_csv("your_tesla_data.csv") 
+    df['Date'] = pd.to_datetime(df['Date']) # Ensure Date is datetime type
+    return df
+
+df = load_data()
+
+# ==========================================
+# 2. CREATE THE SIDEBAR FILTERS
+# ==========================================
+st.sidebar.header("Dashboard Filters")
+
+# Date range picker components
+start_date = st.sidebar.date_input("Start Date", df['Date'].min().date())
+end_date = st.sidebar.date_input("End Date", df['Date'].max().date())
+
+# Multi-select column component
+available_metrics = ["Open", "High", "Low", "Close", "Adj Close"]
+selected_metrics = st.sidebar.multiselect(
+    "Select Metrics to Display",
+    options=available_metrics,
+    default=["Open", "Close"] # Default choices on load
+)
+
+# ==========================================
+# 3. FILTER THE DATA BASED ON WIDGETS
+# ==========================================
+# Slicing the dataframe using the sidebar variables
+filtered_df = df[
+    (df['Date'].dt.date >= start_date) & 
+    (df['Date'].dt.date <= end_date)
+]
+
+# ==========================================
+# 4. MAIN DASHBOARD DISPLAY
+# ==========================================
+st.title("Tesla Stock Analysis Dashboard")
+
+# Check if the user actually selected any metrics to plot
+if selected_metrics:
+    st.subheader("Stock Performance Over Time")
+    
+    # Create the Matplotlib plot using the FILTERED data
+    fig, ax = plt.subplots(figsize=(10, 5))
+    for metric in selected_metrics:
+        ax.plot(filtered_df['Date'], filtered_df[metric], label=metric)
+        
+    ax.set_ylabel("Price ($)")
+    ax.set_xlabel("Date")
+    ax.legend()
+    ax.grid(True)
+    
+    # Display the plot on the main page
+    st.pyplot(fig)
+else:
+    st.warning("⚠️ Please select at least one metric in the sidebar to display the graph.")
 # In[10]:
 
 
