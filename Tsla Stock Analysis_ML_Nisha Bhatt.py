@@ -2964,7 +2964,7 @@ loaded_model.summary()
 
 # 2. PREPARE UNSEEN DATA FOR SANITY CHECK
 # Using the last 20% of each horizon's test set as "unseen" data
-─
+
 print("\nPreparing unseen data slices...")
 print("-" * 60)
 
