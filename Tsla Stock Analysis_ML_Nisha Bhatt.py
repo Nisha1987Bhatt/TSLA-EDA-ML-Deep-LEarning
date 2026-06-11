@@ -130,11 +130,11 @@ import matplotlib.pyplot as plt
 # (Replace this with how you currently load your Tesla CSV file)
 @st.cache_data
 def load_data():
-    df = pd.read_csv("tsla_data.csv") 
+    df = pd.read_csv("TSLA.csv") 
     df['Date'] = pd.to_datetime(df['Date']) # Ensure Date is datetime type
     return df
 
-df = load_data("TSLA.csv")
+df = load_data()
 
 # ==========================================
 # 2. CREATE THE SIDEBAR FILTERS
