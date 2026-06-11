@@ -1,12 +1,4 @@
-**Commit and push** the changes to your GitHub repository.
 
----
-
-### Pro-Tip: Add Your Other Libraries Too
-Since this script does data analysis, machine learning, and deep learning, you will likely hit the same error for other packages (like `pandas`, `numpy`, `scikit-learn`, etc.) right after fixing this one. 
-
-
-```text
 matplotlib
 pandas
 numpy
